@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Um Guia Completo ao Elemento Table</title>
+  <style>
+    table {
+      border-spacing: 0.5rem 1rem;
+      border-collapse: collapse;
+    }
+    
+    td, th, .table-cell {
+      border: 1px solid #999;
+      padding: 0.5rem;
+      text-align: start;
+    }
+
+    .nowrap {
+      white-space: nowrap;
+    }
+
+    .table-cell {
+      display: table-cell;
+    }
+
+    #css_properties_of_table td{
+      vertical-align: sub;
+    }
+  </style>
+</head>
+<body>
+  <h1>Elemento Tabela</h1>
+
+  <h2>Estilização Básica</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th>Favorite Color</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <!-- <th scope="row">Jim</th> -->
+        <td>Jim</td>
+        <td>00001</td>
+        <td>Blue</td>
+      </tr>
+      <tr>
+        <!-- <th scope="row">Sue</th> -->
+        <td>Sue</td>
+        <td>00002</td>
+        <td>Red</td>
+      </tr>
+      <tr>
+        <!-- <th scope="row">Barb</th> -->
+        <td>Barb</td>
+        <td>00003</td>
+        <td>Green</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Conectando Células</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th>Favorite Color</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="2">Jim</td>
+        <!-- <td>00001</td> -->
+        <td rowspan="2">Blue</td>
+      </tr>
+      <tr>
+        <td>Sue</td>
+        <td>00002</td>
+        <!-- <td>Red</td> -->
+      </tr>
+      <tr>
+        <td>Barb</td>
+        <td colspan="2">00003</td>
+        <!-- <td>Green</td> -->
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Tão largo quanto deve ser ou indo além</h2>
+  <div style="width: 200px">
+    <table>
+      <tr>
+        <td style="white-space: nowrap;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis sunt itaque impedit vel, architecto aliquam porro maiores ea dolores quibusdam voluptate nam?</td>
+      </tr>
+    </table>
+  </div>
+
+  <h2>Fazendo elementos semâmticos se comportarem como uma tabela</h2>
+  <section style="display: inline-table;">
+    <header style="display: table-row;">
+      <div class="table-cell">A</div>
+      <div class="table-cell">B</div>
+      <div class="table-cell">C</div>
+    </header>
+    <div style="display: table-row;">
+      <div class="table-cell">X</div>
+      <div class="table-cell">Y</div>
+      <div class="table-cell">Z</div>
+    </div>
+  </section>
+  <section style="display: inline-table;">
+    <header style="display: table-row;">
+      <div class="table-cell" c>A</div>
+      <div class="table-cell">B</div>
+      <div class="table-cell">C</div>
+    </header>
+    <div style="display: table-row;">
+      <div class="table-cell">X</div>
+      <div class="table-cell">Y</div>
+      <div class="table-cell">Z</div>
+    </div>
+  </section>
+
+  <h2>Importantes regras de estilo para tabelas</h2>
+  <table id="css_properties_of_table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th>Favorite Color</th>
+        <th>Lorem Ipsum</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Jim</td>
+        <td>00001</td>
+        <td>Blue</td>
+        <td style="padding-top: 2rem; white-space: pre-line;">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Atque minima omnis dolor doloremque, vero quis rem, voluptate laboriosam, quasi excepturi blanditiis quidem recusandae quas inventore aspernatur eos nam quisquam quaerat.</td>
+      </tr>
+      <tr>
+        <td>Sue</td>
+        <td>00002</td>
+        <td>Red</td>
+        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos praesentium, obcaecati ab numquam harum corporis voluptatum. Quasi, veniam officia velit, omnis, quos eligendi dolor adipisci explicabo ex fugit dignissimos cum!</td>
+      </tr>
+      <tr>
+        <td>Barb</td>
+        <td>00003</td>
+        <td>Green</td>
+        <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae libero sunt exercitationem odit hic maxime quisquam earum consequuntur praesentium repellendus suscipit ullam iste voluptas at ipsam, fugit molestias repudiandae reprehenderit.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Usando o Emmet para criação da marcação da tabela</h2>
+  <table>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+
+  <!-- table>tr>th{Name}+th{ID}+th{Favorite Color}^tr*3>td{Name}+td{$$$$$}+td{Blue} -->
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>ID</th>
+      <th>Favorite Color</th>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>00001</td>
+      <td>Blue</td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>00002</td>
+      <td>Blue</td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>00003</td>
+      <td>Blue</td>
+    </tr>
+  </table>
+  
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+<table>
+  <thead>
+    <tr>
+      <th>Header Cell</th>
+      <th>Header Cell</th>
+      <th>Header Cell</th>
+      <th>Header Cell</th>
+      <th>Header Cell</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th>Footer Cell</th>
+      <th>Footer Cell</th>
+      <th>Footer Cell</th>
+      <th>Footer Cell</th>
+      <th>Footer Cell</th>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <th>Row Header</th>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+    </tr>
+    <tr>
+      <th>Row Header</th>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+    </tr>
+    <tr>
+      <th>Row Header</th>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+    </tr>
+    <tr>
+      <th>Row Header</th>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+    </tr>
+    <tr>
+      <th>Row Header</th>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+    </tr>
+    <tr>
+      <th>Row Header</th>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+    </tr>
+    <tr>
+      <th>Row Header</th>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+    </tr>
+    <tr>
+      <th>Row Header</th>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+    </tr>
+    <tr>
+      <th>Row Header</th>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+    </tr>
+    <tr>
+      <th>Row Header</th>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+      <td>Cell Data</td>
+    </tr>
+  </tbody>
+</table>
+</html>

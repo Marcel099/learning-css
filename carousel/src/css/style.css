@@ -1,0 +1,101 @@
+/* line 3, ../../../../../../../www/learning-css/carousel/src/scss/style.scss */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* line 8, ../../../../../../../www/learning-css/carousel/src/scss/style.scss */
+.wrapper {
+  overflow: hidden;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  /* line 8, ../../../../../../../www/learning-css/carousel/src/scss/style.scss */
+  .wrapper {
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto;
+  }
+}
+
+/* line 21, ../../../../../../../www/learning-css/carousel/src/scss/style.scss */
+.gallery {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  display: flex;
+  -ms-overflow-style: none;
+}
+
+@media screen and (min-width: 1200px) {
+  /* line 21, ../../../../../../../www/learning-css/carousel/src/scss/style.scss */
+  .gallery {
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+  }
+}
+
+/* line 36, ../../../../../../../www/learning-css/carousel/src/scss/style.scss */
+.gallery::-webkit-scrollbar {
+  display: none;
+}
+
+/* line 41, ../../../../../../../www/learning-css/carousel/src/scss/style.scss */
+.gallery__img {
+  scroll-snap-align: start;
+  margin-bottom: 10px;
+  min-height: 100vh;
+  object-fit: cover;
+}
+
+/* line 48, ../../../../../../../www/learning-css/carousel/src/scss/style.scss */
+.lil-nav {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  grid-row-start: 2;
+  -ms-overflow-style: none;
+}
+
+@media screen and (min-width: 1200px) {
+  /* line 48, ../../../../../../../www/learning-css/carousel/src/scss/style.scss */
+  .lil-nav {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: block;
+    grid-row-start: auto;
+  }
+}
+
+/* line 62, ../../../../../../../www/learning-css/carousel/src/scss/style.scss */
+.lil-nav::-webkit-scrollbar {
+  display: none;
+}
+
+/* line 67, ../../../../../../../www/learning-css/carousel/src/scss/style.scss */
+.lil-nav a {
+  height: 200px;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+/* line 73, ../../../../../../../www/learning-css/carousel/src/scss/style.scss */
+.lil-nav__img {
+  object-fit: cover;
+  filter: saturate(0);
+  transition: 0.3s ease all;
+}
+
+/* line 79, ../../../../../../../www/learning-css/carousel/src/scss/style.scss */
+.lil-nav__img:hover {
+  transform: scale(1.05);
+  filter: saturate(1);
+}
+
+/*# sourceMappingURL=style.css.map */

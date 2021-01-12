@@ -1,0 +1,76 @@
+$border_radius: 10px;
+
+html, body {
+  background: #353a40;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+
+  margin: 50px auto;
+
+  border-radius: $border_radius;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+
+
+  td, th {
+    padding: 1rem;
+    border: 2px solid white;
+  }
+
+  > thead {
+    > tr > th {
+      background: linear-gradient(lightslategray, darkslategray);
+      color: white;
+
+      text-align: left;
+
+      font-weight: bold;
+
+      &:first-child {
+        border-top-left-radius: $border_radius;
+      }
+
+      &:last-child {
+        border-top-right-radius: $border_radius;
+      }
+    }
+  }
+
+  > tbody {
+
+    &:hover > tr > td {
+      opacity: 0.5;
+    }
+
+    &:hover > tr:hover > td {
+      opacity: 1;
+    }
+
+    > tr { 
+      color: #808080;
+
+      &:nth-child(2n) {
+        background-color: #eee;
+      }
+
+      &:nth-child(2n + 1) {
+        background-color: white;
+      }
+
+      &:last-child td {
+
+        &:first-child {
+          border-bottom-left-radius: $border_radius;
+        }
+
+        &:last-child {
+          border-bottom-right-radius: $border_radius;
+        }
+      }
+    }
+    
+  }
+}

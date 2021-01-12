@@ -1,0 +1,71 @@
+.parent {
+  background: green;
+  width: 15rem;
+  height: 10rem;
+
+  position: relative;
+}
+
+.child-0 {
+  background: cyan;
+  width: 95%;
+  height: 20%;
+}
+
+.child-1 {
+  background: blue;
+  width: 60%;
+  height: 60%;
+
+  top: 3rem;
+
+  z-index: 3;
+  position: absolute;
+}
+
+
+.child-1::after {
+  display: block;
+  width: 2rem;
+  height: 100%;
+  
+  position: absolute;
+  right: -2rem;
+
+  content: '';
+  background: greenyellow;
+}
+
+.child-2 {
+  background: greenyellow;
+  width: 20%;
+  height: 20%;
+
+  top: 0.5rem;
+  right: 0.5rem;
+
+  z-index: 4;
+  position: absolute;
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+
+  width: 100vw;
+}
+
+p {
+  width: 60vw;
+  white-space: pre-line;
+  font-size: 1.5rem;
+  font-weight: 300;
+
+  margin: 0;
+}
+
+.text-wrapper > p:nth-child(3) {
+  padding-left: 10vh;
+}

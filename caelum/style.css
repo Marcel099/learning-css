@@ -1,0 +1,179 @@
+/* h2 ~ p {
+    font-style: italic;
+}
+
+h2 + p {
+    font-variant: small-caps;
+} */
+
+/*article > h1 {
+    color: blue;
+} */
+
+/* p:not(.especial) {
+    color: gray;
+} */
+
+/* li:first-child {
+    color: red;
+}
+
+li:last-child {
+    color: blue;
+}
+
+li:nth-child(3) {
+    color: yellow;
+} */
+
+/* 
+li:nth-child(3n) {
+    color: red;
+}
+
+li:nth-child(3n+2) {
+    color: blue;
+} */
+
+/* li:hover {
+    background-color:#ff00ff;
+} */
+
+/* p{
+    width: 10vw;
+}
+
+p::first-letter {
+    font-size: 200%;
+}
+
+p::first-line {
+    font-style: italic;
+} */
+
+/* a::before {
+    content: '[';
+}
+
+a::after {
+    content: ']';
+}
+
+a[href]::after {
+    content: ' (externo)';
+}
+
+a[href^=http\:\/\/]::after {
+    content: ' (externo)';
+} */
+
+div {
+    width: 350px;
+    height: 350px;
+    background-color: grey;
+    float: left;
+    margin-left: 30px;
+}
+
+.t-teste {
+    position: relative;
+    top: 10px;
+    left: 30px;
+    color: blue;
+    background-color: lightgray;
+    width: 100px;
+
+    /* Move o elemento no eixo horizontal */
+    /* transform: translateX(50px); */
+    /* Move o elemento no eixo vertical */
+    /* transform: translateY(-10px); */
+    /* Move o elemento nos dois eixos (X, Y) */
+    /* transform: translate(40px, -20px); */
+
+    
+    /* Alterar a escala total do elemento */
+    /* transform: scale(1.2); */
+
+    /* Alterar a escala vertical e horizontal do elemento */
+    /* transform: scale(1, 1.2); */
+
+    /* Distorcer o elemento no eixo horizontal */
+    /* transform: skewX(10deg); */
+
+    /* Distorcer o elemento no eixo vertical */
+    /* transform: skewY(10deg); */
+
+    /* transform: rotate(10deg); */
+
+    transition: 0.7s;
+}
+
+.t-teste:hover {
+    transition: all 0.7s;
+    background-color: rgba(255,255,255,0.8);
+    box-shadow: 3px 3px 5px #333;
+    transform: scale(1.2) rotate(-5deg);
+
+    /* top: 30px; */
+    /* color: red; */
+}
+
+
+/* .a {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(128, 128, 128, 0.3);
+    float: left;
+    margin-left: 30px;
+}
+
+p {
+    background-color: rgb(255, 255, 255);
+} */
+
+/* borda superior esquerda e inferior direita com 5px
+borda superior direita e inferior esquerda com 20px */
+/* .b {
+    border-radius: 5px 20px;
+} */
+
+/* borda superior esquerda com 5px
+borda superior direita e inferior esquerda com 20px
+borda inferior direita com 50px */
+/* .c {
+    border-radius: 5px 20px 50px;
+} */
+
+/* borda superior esquerda com 5px
+borda superior direita com 20px
+borda inferior direita com 50px
+borda inferior esquerda com 100px */
+/* .d {
+    border-radius: 5px 20px 50px 100px;
+} */
+
+/* Deslocamento da sombra e cor: 
+x y blur color */
+/* p {
+    text-shadow: 5px 8px 3px grey, -5px -8px 3px yellowgreen;
+} */
+
+/* .linear {
+    background: linear-gradient(grey, red)
+}
+
+.radial {
+    background: radial-gradient(green, yellow);
+} */
+
+/* .gradiente {
+    background: linear-gradient(180deg, white, blue 70%, black 90%);
+} */
+
+/* .gradiente {
+    background: #cbebff;
+    background: linear-gradient(45deg, #f0f9ff 0%, #cbebff 47%, #a1dbff 100%);
+} */
+
+/* background: linear-gradient(45deg, #f0f9ff 0%, #cbebff 47%, #a1dbff 100%); */
+
