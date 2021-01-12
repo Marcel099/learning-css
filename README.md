@@ -1,6 +1,6 @@
 <h1> learning-css </h1>
 
-<div align="center" style="display: flex">
+<div style="display: flex; text-align: center;">
   <img src="https://img.shields.io/badge/languages-4-blue.svg">
   <img src="https://img.shields.io/github/last-commit/Marcel099/learning-css.svg">
 </div>
