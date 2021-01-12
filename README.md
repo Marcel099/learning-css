@@ -3,7 +3,9 @@
 <div align="center" style="display: flex;">
   <img src="https://img.shields.io/badge/languages-4-blue.svg">
   <img src="https://img.shields.io/github/last-commit/Marcel099/learning-css.svg">
+  <img src="http://hits.dwyl.com/Marcel099/learning-css.svg">
 </div>
+
 
 É um repositório para guardar meus códigos CSS que crio pra praticar certos conhecimentos e aprender novos.
 
